@@ -212,26 +212,14 @@ a:hover {
     width: 36px;
     height: 36px;
     padding: 0 !important;
-    border-radius: 50%;
+    border-radius: var(--radius-sm);
+    color: var(--colour-text) !important;
     transition: all var(--transition);
 }
 
 .nav__social:hover {
-    color: var(--colour-white) !important;
-    transform: translateY(-2px);
-}
-
-.nav__social--facebook:hover {
-    background: #1877f2 !important;
-}
-
-.nav__social--instagram:hover {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
-}
-
-.nav__social svg {
-    width: 18px;
-    height: 18px;
+    color: var(--colour-primary) !important;
+    background: var(--colour-bg-alt);
 }
 
 .nav__toggle {
