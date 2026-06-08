@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2a7a5f"/>
-      <stop offset="100%" style="stop-color:#1e5c47"/>
+      <stop offset="0%" style="stop-color:#A7B8A2"/>
+      <stop offset="100%" style="stop-color:#8A9F86"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <text x="600" y="280" text-anchor="middle" font-family="sans-serif" font-size="52" font-weight="bold" fill="#ffffff">Robyn Pinks</text>
-  <text x="600" y="340" text-anchor="middle" font-family="sans-serif" font-size="30" fill="#d4e8df">Biokineticist &amp; Personal Trainer</text>
-  <text x="600" y="400" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#a3c4b6">Stonehouse, South Africa</text>
+  <text x="600" y="340" text-anchor="middle" font-family="sans-serif" font-size="30" fill="#ffffff">Biokineticist &amp; Personal Trainer</text>
+  <text x="600" y="400" text-anchor="middle" font-family="sans-serif" font-size="22" fill="rgba(255,255,255,0.8)">Stonehouse, South Africa</text>
 </svg>

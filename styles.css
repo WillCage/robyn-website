@@ -13,18 +13,18 @@
 }
 
 :root {
-    /* Colours */
-    --colour-primary: #2a7a5f;
-    --colour-primary-dark: #1e5c47;
-    --colour-primary-light: #3a9b77;
-    --colour-accent: #d4a843;
-    --colour-accent-hover: #b8912e;
-    --colour-text: #2c2c2c;
-    --colour-text-light: #5a5a5a;
-    --colour-bg: #ffffff;
-    --colour-bg-alt: #f7f9f8;
-    --colour-bg-dark: #1a2e25;
-    --colour-border: #e0e7e4;
+    /* Colours — sage green primary, rose pink accent */
+    --colour-primary: #A7B8A2;
+    --colour-primary-dark: #8A9F86;
+    --colour-primary-light: #C3D2BE;
+    --colour-accent: #D98A96;
+    --colour-accent-hover: #C97C86;
+    --colour-text: #2B2B2B;
+    --colour-text-light: #6B6F76;
+    --colour-bg: #FAFAF8;
+    --colour-bg-alt: #F2F3F1;
+    --colour-bg-dark: #3A3A3A;
+    --colour-border: #E0E2E0;
     --colour-white: #ffffff;
 
     /* Typography */
@@ -43,9 +43,9 @@
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
     --transition: 0.3s ease;
 }
 
@@ -88,7 +88,7 @@ a:hover {
     font-family: var(--font-heading);
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: 700;
-    color: var(--colour-primary-dark);
+    color: var(--colour-text);
     text-align: center;
     margin-bottom: var(--spacing-lg);
     position: relative;
@@ -121,14 +121,14 @@ a:hover {
 }
 
 .btn--primary {
-    background-color: var(--colour-primary);
+    background-color: var(--colour-accent);
     color: var(--colour-white);
-    border-color: var(--colour-primary);
+    border-color: var(--colour-accent);
 }
 
 .btn--primary:hover {
-    background-color: var(--colour-primary-dark);
-    border-color: var(--colour-primary-dark);
+    background-color: var(--colour-accent-hover);
+    border-color: var(--colour-accent-hover);
     color: var(--colour-white);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
@@ -164,12 +164,12 @@ a:hover {
     font-family: var(--font-heading);
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--colour-primary-dark);
+    color: var(--colour-text);
     letter-spacing: -0.01em;
 }
 
 .nav__logo-accent {
-    color: var(--colour-primary);
+    color: var(--colour-accent);
 }
 
 .nav__menu {
@@ -189,19 +189,19 @@ a:hover {
 }
 
 .nav__menu a:hover {
-    color: var(--colour-primary);
+    color: var(--colour-primary-dark);
     background: var(--colour-bg-alt);
 }
 
 .nav__cta {
-    background: var(--colour-primary) !important;
+    background: var(--colour-accent) !important;
     color: var(--colour-white) !important;
     padding: 0.5rem 1.2rem !important;
     border-radius: var(--radius-sm) !important;
 }
 
 .nav__cta:hover {
-    background: var(--colour-primary-dark) !important;
+    background: var(--colour-accent-hover) !important;
     color: var(--colour-white) !important;
 }
 
@@ -245,14 +245,14 @@ a:hover {
     font-family: var(--font-heading);
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 800;
-    color: var(--colour-primary-dark);
+    color: var(--colour-text);
     line-height: 1.15;
     margin-bottom: 0.5rem;
 }
 
 .hero__subtitle {
     font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    color: var(--colour-primary);
+    color: var(--colour-primary-dark);
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
 }
@@ -275,6 +275,8 @@ a:hover {
     border-radius: 50%;
     border: 5px solid var(--colour-white);
     box-shadow: var(--shadow-lg);
+    outline: 3px solid var(--colour-primary-light);
+    outline-offset: 4px;
 }
 
 /* --- About Section --- */
@@ -325,7 +327,7 @@ a:hover {
 .service-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
-    border-color: var(--colour-primary-light);
+    border-color: var(--colour-primary);
 }
 
 .service-card__icon {
@@ -337,7 +339,7 @@ a:hover {
     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--colour-primary-dark);
+    color: var(--colour-text);
     margin-bottom: 0.6rem;
 }
 
@@ -363,13 +365,13 @@ a:hover {
     font-family: var(--font-heading);
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--colour-primary-dark);
+    color: var(--colour-text);
     margin-bottom: 0.3rem;
 }
 
 .workplace__location {
     font-size: 1.1rem;
-    color: var(--colour-primary);
+    color: var(--colour-primary-dark);
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
 }
@@ -448,7 +450,7 @@ a:hover {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--colour-primary);
-    box-shadow: 0 0 0 3px rgba(42, 122, 95, 0.15);
+    box-shadow: 0 0 0 3px rgba(167, 184, 162, 0.2);
 }
 
 .form-group textarea {
@@ -462,6 +464,7 @@ a:hover {
     color: rgba(255, 255, 255, 0.8);
     padding: var(--spacing-lg) 5%;
     text-align: center;
+    border-top: 3px solid var(--colour-primary);
 }
 
 .site-footer .container {
