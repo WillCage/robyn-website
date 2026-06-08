@@ -76,4 +76,72 @@ document.addEventListener('DOMContentLoaded', function () {
             navToggle.focus();
         }
     });
+
+    // --- Header scroll effect ---
+    var header = document.querySelector('.site-header');
+    var lastScroll = 0;
+
+    window.addEventListener('scroll', function () {
+        var currentScroll = window.pageYOffset;
+
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
+    }, { passive: true });
+
+    // --- Scroll-triggered fade-in animations ---
+    var fadeElements = document.querySelectorAll(
+        '.credential, .service-card, .contact__info-card, .contact__form, .workplace__visual, .about__decorative, .quote-section__quote, .cta-banner__content'
+    );
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(function (el, index) {
+            el.classList.add('fade-in');
+            // Stagger the animations slightly
+            el.style.transitionDelay = (index % 4) * 0.1 + 's';
+            observer.observe(el);
+        });
+    } else {
+        // Fallback: show everything immediately
+        fadeElements.forEach(function (el) {
+            el.classList.add('visible');
+        });
+    }
+
+    // --- Smooth scroll polyfill for anchor links ---
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            var targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            var target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                var headerHeight = document.querySelector('.site-header').offsetHeight;
+                var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
 });
