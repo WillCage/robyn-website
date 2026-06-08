@@ -1238,14 +1238,35 @@ a:hover {
         border-bottom: 1px solid var(--colour-border);
     }
 
-    .nav__menu .nav__social {
+    /* Horizontal row for social icons + CTA in mobile menu */
+    .nav__extras {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        border-bottom: none !important;
+        width: 100% !important;
+        padding: var(--spacing-sm) 0 0.5rem;
+    }
+
+    .nav__extras a {
+        flex: 0 0 auto;
+        width: auto !important;
+        height: auto !important;
+        padding: 0.55rem 1rem !important;
+        font-size: 0.95rem !important;
         border-bottom: none !important;
     }
 
-    .nav__cta {
-        margin-top: var(--spacing-sm);
-        text-align: center;
-        border-bottom: none !important;
+    .nav__extras .nav__social {
+        width: auto !important;
+        height: auto !important;
+        padding: 0.55rem 0.6rem !important;
+    }
+
+    .nav__extras .nav__cta {
+        padding: 0.55rem 1.4rem !important;
     }
 
     .hero {
