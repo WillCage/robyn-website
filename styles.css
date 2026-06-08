@@ -205,6 +205,35 @@ a:hover {
     color: var(--colour-white) !important;
 }
 
+.nav__social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0 !important;
+    border-radius: 50%;
+    transition: all var(--transition);
+}
+
+.nav__social:hover {
+    color: var(--colour-white) !important;
+    transform: translateY(-2px);
+}
+
+.nav__social--facebook:hover {
+    background: #1877f2 !important;
+}
+
+.nav__social--instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+}
+
+.nav__social svg {
+    width: 18px;
+    height: 18px;
+}
+
 .nav__toggle {
     display: none;
     flex-direction: column;
@@ -464,7 +493,6 @@ a:hover {
     color: rgba(255, 255, 255, 0.8);
     padding: var(--spacing-lg) 5%;
     text-align: center;
-    border-top: 3px solid var(--colour-primary);
 }
 
 .site-footer .container {
@@ -552,10 +580,16 @@ a:hover {
     }
 
     .nav__menu a {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 0.9rem 0.6rem;
         font-size: 1.05rem;
         border-bottom: 1px solid var(--colour-border);
+    }
+
+    .nav__menu .nav__social {
+        border-bottom: none !important;
     }
 
     .nav__cta {
